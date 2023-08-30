@@ -7,7 +7,7 @@ class Header extends React.Component {
         <a href="/" className="header__link">NFT Landing</a>
         <nav className="header__navigation">
           <a href="/" className="header__nav-link selected">Главная</a>
-          <a href="/" className="header__nav-link">Начать</a>
+          <a href="#getstarted" className="header__nav-link" onClick={ (e) => this.scrollToGetSrated() }>Начать</a>
         </nav>
         <div className="header__actions">
           <a href="/" className="btn-transparent">СОЗДАТЬ</a>
@@ -15,6 +15,11 @@ class Header extends React.Component {
         </div>
       </header>
     );
+  }
+
+  scrollToGetSrated() {
+    const getStarted = document.querySelector(".getting-started");
+    getStarted.scrollIntoView({ behavior: 'smooth' });
   }
 }
 

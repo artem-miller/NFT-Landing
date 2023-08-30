@@ -1,4 +1,5 @@
 import React from "react";
+import ImagePost from "./ImagePost";
 
 class Body extends React.Component {
   title = this.props.title;
@@ -23,6 +24,7 @@ class Body extends React.Component {
             }>Создать</button>
           </div>
         </div>
+        <ImagePost image={ process.env.PUBLIC_URL + '/images/logo.jpg' } likes="258" />
       </div>
     );
   }
